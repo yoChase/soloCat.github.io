@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetConnect - Find Tennis Partners Nearby</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🎾 NetConnect</div>
+        <nav>
+            <a href="#register">Join Community</a>
+            <a href="#dashboard">Find Partners</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Find Your Perfect Tennis Partner</h1>
+            <p>Connect with local players, match your skill level, and hit the courts.</p>
+        </section>
+
+        <!-- Registration Form Section -->
+        <section id="register" class="form-section">
+            <h2>Create Your Player Profile</h2>
+            <form id="playerForm">
+                <div class="form-group-row">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" min="14" max="99" required placeholder="25">
+                    </div>
+                </div>
+
+                <div class="form-group-row">
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" required>
+                            <option value="">Select...</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Non-binary">Non-binary</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City / Area</label>
+                        <input type="text" id="city" required placeholder="Coquitlam">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="level">NTRP Skill Level (1.0 - 7.0)</label>
+                    <input type="number" id="level" min="1.0" max="7.0" step="0.5" required placeholder="3.5">
+                    <small>1.0 = Absolute Beginner | 4.0 = Advanced Intermediate | 7.0 = Touring Pro</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="intro">Short Introduction</label>
+                    <textarea id="intro" rows="3" maxlength="200" required placeholder="Hi! I play intermediate singles and prefer evening matches at the local community park..."></textarea>
+                </div>
+
+                <button type="submit">Create Profile & View Matches</button>
+            </form>
+        </section>
+
+        <!-- Live Dashboard Section -->
+        <section id="dashboard" class="dashboard-section">
+            <h2>Available Partners Nearby</h2>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <input type="text" id="searchCity" placeholder="Filter by City...">
+                <select id="filterLevel">
+                    <option value="">All Skill Levels</option>
+                    <option value="1">1.0 - 2.5 (Beginner)</option>
+                    <option value="3">3.0 - 4.5 (Intermediate)</option>
+                    <option value="5">5.0+ (Advanced)</option>
+                </select>
+            </div>
+
+            <!-- Player Grid -->
+            <div class="player-grid" id="playerGrid">
+                <!-- Mock Data loaded via JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 NetConnect. Match. Play. Repeat.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
